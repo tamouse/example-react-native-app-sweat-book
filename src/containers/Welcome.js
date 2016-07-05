@@ -7,8 +7,8 @@ import {
 } from 'react-native';
 
 export const Welcome = (props) => (
-  <View style={{ flex: 1 }}>
-    <View style={styles.titleContianer}>
+  <View style={styles.container}>
+    <View style={styles.titleContainer}>
       <Text style={styles.title}>
         Sweatbook
       </Text>
@@ -23,7 +23,7 @@ export const Welcome = (props) => (
         onPress={props.startWorkout}
         style={styles.button}
       >
-        <Text>Start Workout</Text>
+        <Text style={styles.buttonText}>Start Workout</Text>
       </TouchableOpacity>
     </View>
   </View>
@@ -32,12 +32,12 @@ export const Welcome = (props) => (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
     alignItems: 'center'
   },
-  titleContianer: {
+  titleContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    flex: 0.2
   },
   title: {
     fontSize: 48,
@@ -46,19 +46,22 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   lastWorkoutContainer: {
-    flex: 0.3
+    padding: 50,
+    alignItems: 'center'
   },
-  lastWorkoutTitle: {
+  lastWorkout: {
     fontSize: 30,
-    fontWeight: '100',
+    fontWeight: '300',
     color: 'blue'
   },
   button: {
-    borderColor: '#EADCDC',
-    padding: 10,
-    borderRadius: 10
+    borderColor: '#333',
+    borderWidth: 1,
+    borderRadius: 10,
+    alignItems: 'center',
+    padding: 20
   },
   buttonText: {
-    color: '#EADCDC'
+    color: '#333'
   }
 });
